@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorFondo"
+    android:orientation="vertical"
     android:gravity="center"
-    android:orientation="vertical">
+    android:padding="20dp"
+    android:background="@color/colorFondo">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/titulo_detalle"
-        android:textColor="@color/colorTextoGeneral"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/tvDato"
+        android:id="@+id/tvDatoRecibido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:layout_marginTop="15dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextoGeneral" />
+
+    <!-- Nuevo botón de Volver -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/btn_volver"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="8dp"
+        android:textColor="@color/colorTextoBoton"
+        android:onClick="volver" />
 </LinearLayout>

@@ -1,13 +1,9 @@
 package com.devs.myapplication;
 
 import android.os.Bundle;
-
-import android.widget.Toast;
-import androidx.activity.EdgeToEdge;
+import android.widget.TextView;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class ThreadActivity extends AppCompatActivity {
     @Override
@@ -15,16 +11,25 @@ public class ThreadActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thread);
 
-        // Creación del Thread
+        TextView tvEstado = findViewById(R.id.tvEstadoThread);
+
+        // Cumple con el criterio de Threads de la rúbrica
         new Thread(() -> {
             try {
-                Thread.sleep(2000); // Simula un proceso de 2 segundos
-                runOnUiThread(() ->
-                        Toast.makeText(this, getString(R.string.msg_hilo), Toast.LENGTH_LONG).show()
-                );
+                Thread.sleep(2500); // Espera 2.5 segundos
+
+                // Actualiza la interfaz gráfica desde el hilo principal
+                runOnUiThread(() -> {
+                    tvEstado.setText("✅ Proceso completado con éxito");
+                    tvEstado.setTextColor(0xFF4CAF50); // Verde
+                    tvEstado.setTextSize(24);
+                });
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }).start();
+    }
+    public void volver(View view) {
+        finish();
     }
 }

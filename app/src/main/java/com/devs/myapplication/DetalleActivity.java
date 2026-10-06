@@ -1,13 +1,9 @@
 package com.devs.myapplication;
 
 import android.os.Bundle;
-
 import android.widget.TextView;
-import androidx.activity.EdgeToEdge;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class DetalleActivity extends AppCompatActivity {
     @Override
@@ -15,11 +11,15 @@ public class DetalleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle);
 
-        TextView tvDato = findViewById(R.id.tvDato);
-        // Validar que el intent traiga datos
+        TextView tvDato = findViewById(R.id.tvDatoRecibido);
+
+        // Validación de datos recibidos
         if (getIntent() != null && getIntent().hasExtra("DATO_ENVIADO")) {
             String dato = getIntent().getStringExtra("DATO_ENVIADO");
             tvDato.setText(dato);
         }
+    }
+    public void volver(View view) {
+        finish();
     }
 }
