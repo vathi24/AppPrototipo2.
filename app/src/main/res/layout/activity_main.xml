@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/colorFondo" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:gravity="center" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="20dp">
+
+        <!-- Intents Implícitos -->
+        <Button android:background="@drawable/bg_boton" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:layout_width="match_parent" android:onClick="abrirWeb" android:text="@string/btn_web" android:textColor="@color/colorTextoBoton"/>
+        <Button android:background="@drawable/bg_boton" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:layout_width="match_parent" android:onClick="llamar" android:text="@string/btn_llamar" android:textColor="@color/colorTextoBoton"/>
+        <Button android:background="@drawable/bg_boton" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:layout_width="match_parent" android:onClick="abrirMapa" android:text="@string/btn_mapa" android:textColor="@color/colorTextoBoton"/>
+        <Button android:background="@drawable/bg_boton" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:layout_width="match_parent" android:onClick="abrirAjustes" android:text="@string/btn_wifi" android:textColor="@color/colorTextoBoton"/>
+        <Button android:background="@drawable/bg_boton" android:layout_height="wrap_content" android:layout_marginBottom="30dp" android:layout_width="match_parent" android:onClick="enviarSMS" android:text="@string/btn_sms" android:textColor="@color/colorTextoBoton"/>
+
+        <!-- Intents Explícitos -->
+        <Button android:background="@drawable/bg_boton" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:layout_width="match_parent" android:onClick="irConfig" android:text="@string/btn_config" android:textColor="@color/colorTextoBoton"/>
+        <Button android:background="@drawable/bg_boton" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:layout_width="match_parent" android:onClick="irDetalle" android:text="@string/btn_detalle" android:textColor="@color/colorTextoBoton"/>
+        <Button android:background="@drawable/bg_boton" android:layout_height="wrap_content" android:layout_width="match_parent" android:onClick="irThread" android:text="@string/btn_thread" android:textColor="@color/colorTextoBoton"/>
+
+    </LinearLayout>
+</ScrollView>
