@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">AppPrototipo2</string>
+    <string name="btn_web">1. Abrir Sitio Web</string>
+    <string name="btn_llamar">2. Llamar por Teléfono</string>
+    <string name="btn_mapa">3. Ver Mapa Sede</string>
+    <string name="btn_wifi">4. Ajustes Wi-Fi</string>
+    <string name="btn_sms">5. Enviar SMS</string>
+
+    <string name="btn_config">6. Ir a Configuración</string>
+    <string name="btn_detalle">7. Ver Detalle (Enviar Dato)</string>
+    <string name="btn_thread">8. Iniciar Proceso (Thread)</string>
+
+    <string name="error_intent">Error: Acción no soportada en este teléfono</string>
+    <string name="msg_hilo">Hilo finalizado: Datos procesados</string>
+    <string name="dato_enviado">Alumno Santo Tomás</string>
+
+    <string name="titulo_config">Pantalla de Configuración</string>
+    <string name="titulo_detalle">Detalles Recibidos</string>
+    <string name="titulo_thread">Procesando en Hilo...</string>
 </resources>
